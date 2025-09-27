@@ -14,7 +14,7 @@ interests = [
 
 [[extra.education.courses]]
   course = "Latest degree"
-  institution = "Some acamedy"
+  institution = "Some academy"
   year = 2020
 
 [[extra.education.courses]]

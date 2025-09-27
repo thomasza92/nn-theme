@@ -509,7 +509,7 @@ pre {
 
 .col {
   flex-basis: 0;
-  flex-grow: 1;
+  grow: 1;
   max-width: 100%; }
 
 .row-cols-1 > * {
@@ -670,7 +670,7 @@ pre {
 @media (min-width: 576px) {
   .col-sm {
     flex-basis: 0;
-    flex-grow: 1;
+    grow: 1;
     max-width: 100%; }
   .row-cols-sm-1 > * {
     flex: 0 0 100%;
@@ -788,7 +788,7 @@ pre {
 @media (min-width: 768px) {
   .col-md {
     flex-basis: 0;
-    flex-grow: 1;
+    grow: 1;
     max-width: 100%; }
   .row-cols-md-1 > * {
     flex: 0 0 100%;
@@ -906,7 +906,7 @@ pre {
 @media (min-width: 992px) {
   .col-lg {
     flex-basis: 0;
-    flex-grow: 1;
+    grow: 1;
     max-width: 100%; }
   .row-cols-lg-1 > * {
     flex: 0 0 100%;
@@ -1024,7 +1024,7 @@ pre {
 @media (min-width: 1200px) {
   .col-xl {
     flex-basis: 0;
-    flex-grow: 1;
+    grow: 1;
     max-width: 100%; }
   .row-cols-xl-1 > * {
     flex: 0 0 100%;
@@ -1733,7 +1733,7 @@ textarea.form-control {
       padding-left: 0; }
     .form-inline .form-check-input {
       position: relative;
-      flex-shrink: 0;
+      shrink: 0;
       margin-top: 0;
       margin-right: 0.25rem;
       margin-left: 0; }
@@ -2985,7 +2985,7 @@ input.btn-block[type="button"] {
 
 .nav-justified .nav-item {
   flex-basis: 0;
-  flex-grow: 1;
+  grow: 1;
   text-align: center; }
 
 .tab-content > .tab-pane {
@@ -3043,7 +3043,7 @@ input.btn-block[type="button"] {
 
 .navbar-collapse {
   flex-basis: 100%;
-  flex-grow: 1;
+  grow: 1;
   align-items: center; }
 
 .navbar-toggler {
@@ -3375,7 +3375,7 @@ input.btn-block[type="button"] {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-  flex-shrink: 0;
+  shrink: 0;
   width: 100%; }
 
 .card-img,
@@ -4149,7 +4149,7 @@ a.close.disabled {
     overflow: hidden; }
   .modal-dialog-scrollable .modal-header,
   .modal-dialog-scrollable .modal-footer {
-    flex-shrink: 0; }
+    shrink: 0; }
   .modal-dialog-scrollable .modal-body {
     overflow-y: auto; }
 
@@ -5020,17 +5020,17 @@ button.bg-dark:focus {
 .flex-fill {
   flex: 1 1 auto !important; }
 
-.flex-grow-0 {
-  flex-grow: 0 !important; }
+.grow-0 {
+  grow: 0 !important; }
 
 .flex-grow-1 {
-  flex-grow: 1 !important; }
+  grow: 1 !important; }
 
-.flex-shrink-0 {
-  flex-shrink: 0 !important; }
+.shrink-0 {
+  shrink: 0 !important; }
 
 .flex-shrink-1 {
-  flex-shrink: 1 !important; }
+  shrink: 1 !important; }
 
 .justify-content-start {
   justify-content: flex-start !important; }
@@ -5116,13 +5116,13 @@ button.bg-dark:focus {
   .flex-sm-fill {
     flex: 1 1 auto !important; }
   .flex-sm-grow-0 {
-    flex-grow: 0 !important; }
+    grow: 0 !important; }
   .flex-sm-grow-1 {
-    flex-grow: 1 !important; }
+    grow: 1 !important; }
   .flex-sm-shrink-0 {
-    flex-shrink: 0 !important; }
+    shrink: 0 !important; }
   .flex-sm-shrink-1 {
-    flex-shrink: 1 !important; }
+    shrink: 1 !important; }
   .justify-content-sm-start {
     justify-content: flex-start !important; }
   .justify-content-sm-end {
@@ -5186,13 +5186,13 @@ button.bg-dark:focus {
   .flex-md-fill {
     flex: 1 1 auto !important; }
   .flex-md-grow-0 {
-    flex-grow: 0 !important; }
+    grow: 0 !important; }
   .flex-md-grow-1 {
-    flex-grow: 1 !important; }
+    grow: 1 !important; }
   .flex-md-shrink-0 {
-    flex-shrink: 0 !important; }
+    shrink: 0 !important; }
   .flex-md-shrink-1 {
-    flex-shrink: 1 !important; }
+    shrink: 1 !important; }
   .justify-content-md-start {
     justify-content: flex-start !important; }
   .justify-content-md-end {
@@ -5256,13 +5256,13 @@ button.bg-dark:focus {
   .flex-lg-fill {
     flex: 1 1 auto !important; }
   .flex-lg-grow-0 {
-    flex-grow: 0 !important; }
+    grow: 0 !important; }
   .flex-lg-grow-1 {
-    flex-grow: 1 !important; }
+    grow: 1 !important; }
   .flex-lg-shrink-0 {
-    flex-shrink: 0 !important; }
+    shrink: 0 !important; }
   .flex-lg-shrink-1 {
-    flex-shrink: 1 !important; }
+    shrink: 1 !important; }
   .justify-content-lg-start {
     justify-content: flex-start !important; }
   .justify-content-lg-end {
@@ -5326,13 +5326,13 @@ button.bg-dark:focus {
   .flex-xl-fill {
     flex: 1 1 auto !important; }
   .flex-xl-grow-0 {
-    flex-grow: 0 !important; }
+    grow: 0 !important; }
   .flex-xl-grow-1 {
-    flex-grow: 1 !important; }
+    grow: 1 !important; }
   .flex-xl-shrink-0 {
-    flex-shrink: 0 !important; }
+    shrink: 0 !important; }
   .flex-xl-shrink-1 {
-    flex-shrink: 1 !important; }
+    shrink: 1 !important; }
   .justify-content-xl-start {
     justify-content: flex-start !important; }
   .justify-content-xl-end {
@@ -7191,10 +7191,10 @@ body.no-navbar {
 
 .page-header,
 .page-footer {
-  flex-shrink: 0; }
+  shrink: 0; }
 
 .page-body {
-  flex-grow: 1; }
+  grow: 1; }
 
 .max-width-640 {
   max-width: 640px; }

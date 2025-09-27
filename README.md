@@ -9,7 +9,7 @@ First lets introduce some technical details:
 - It relies on [zola](https://www.getzola.org/).
 - It has no javascript.
 - The CSS is built with [tailwindcss](https://tailwindcss.com/).
-    - The blog articles are themed with [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) theme.
+    - The blog articles are themed with [@tailwindcss/typography](https://tailwindcss-typography.vercel.app) theme.
 
 
 ## Getting started
@@ -34,17 +34,12 @@ The theme comes with the precompiled style files (`static/styles/styles.css`). H
 
 The most simple way, is to follow the [installation page of tailwindcss](https://tailwindcss.com/docs/installation/).
 
-At the end, you should have tailwindcss installed, and I advise to use the following tailwind configuration:
+At the end, you should have tailwindcss installed, and I advise to use the following tailwind configuration (for tailwindcss v4):
 
 ```js
 # tailwind.config.js
 module.exports = {
   content: ["./templates/**/*.html", "./themes/**/*.html",  "./themes/**/*.html"],
-  theme: {},
-  variants: {},
-  plugins: [
-      require('@tailwindcss/typography'),
-  ],
 };
 ```
 

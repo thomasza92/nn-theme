@@ -9,7 +9,7 @@ Example of blog post
 ## Summary
 
 The posts are rendered with @tailwind/typography plugins.
-You can finnd more details about how to configure it on its official [webpage](https://tailwindcss.com/docs/typography-plugin).
+You can finnd more details about how to configure it on its official [webpage](https://tailwindcss-typography.vercel.app).
 
 However, you can still use zola features such as usual.
 

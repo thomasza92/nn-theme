@@ -1,6 +1,7 @@
 /* ./styles/styles.css */
 
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 #header {
   background-color: white;

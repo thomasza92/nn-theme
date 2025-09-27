@@ -15,7 +15,7 @@ Example of how to use kodama theme.
 This theme is greatly inspired from hugo academic theme.
 
 First lets introduce some technical details:
-- It relies on [zola](https://getzola.com).
+- It relies on [zola](https://www.getzola.org).
 - It has no javascript.
 - The CSS is built with [tailwindcss](https://tailwindcss.com/).
     - The blog articles are themed with [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) theme.

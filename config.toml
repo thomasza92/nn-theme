@@ -6,8 +6,6 @@ compile_sass = false
 
 title = "Website title"
 
-version = "1.0.1"
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
@@ -36,6 +34,7 @@ highlight_code = true
 highlight_theme = "base16-ocean-dark"
 
 [extra]
+version = "1.0.1"
 
 avatar = "img/avatar.jpg"
 favicon = "img/avatar.jpg"

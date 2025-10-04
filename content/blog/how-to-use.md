@@ -15,7 +15,7 @@ Example of how to use kodama theme.
 This theme is greatly inspired from hugo academic theme.
 
 First lets introduce some technical details:
-- It relies on [zola](https://getzola.com).
+- It relies on [zola](https://www.getzola.org).
 - It has no javascript.
 - The CSS is built with [tailwindcss](https://tailwindcss.com/).
     - The blog articles are themed with [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) theme.
@@ -39,7 +39,7 @@ and set in the `config.toml` the variable `theme` to `kodama-theme`.
 [Tailwindcss](https://tailwindcss.com/) is a framework that parses your html files, and generate the minimal CSS required.
 This theme depends on this framework.
 
-The theme comes with the precompiled style files (`static/styles/styles.css`). However, if you wish to change the style, or modify the template htlm, you might need to recompile your styles.
+The theme comes with the precompiled style files (`static/styles/styles.css`). However, if you wish to change the style, or modify the template html, you might need to recompile your styles.
 
 The most simple way, is to follow the [installation page of tailwindcss](https://tailwindcss.com/docs/installation).
 
@@ -122,7 +122,7 @@ interests = [
 # The list of your degrees / education
 [[extra.education.courses]]
   course = "Latest degree"
-  institution = "Some acamedy"
+  institution = "Some academy"
   year = 2020
 
 [[extra.education.courses]]

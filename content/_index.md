@@ -1,6 +1,5 @@
 +++
 title = "Kodama"
-date = 2020-07-09
 page_template="page.html"
 
 [extra]
@@ -14,7 +13,7 @@ interests = [
 
 [[extra.education.courses]]
   course = "Latest degree"
-  institution = "Some acamedy"
+  institution = "Some academy"
   year = 2020
 
 [[extra.education.courses]]

@@ -9,7 +9,7 @@ First lets introduce some technical details:
 - It relies on [zola](https://www.getzola.org/).
 - It has no javascript.
 - The CSS is built with [tailwindcss](https://tailwindcss.com/).
-    - The blog articles are themed with [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) theme.
+    - The blog articles are themed with [@tailwindcss/typography](https://tailwindcss-typography.vercel.app) theme.
 
 
 ## Getting started
@@ -32,19 +32,14 @@ This theme depends on this framework.
 
 The theme comes with the precompiled style files (`static/styles/styles.css`). However, if you wish to change the style, or modify the template html, you might need to recompile your styles.
 
-The most simple way, is to follow the [installation page of tailwindcss](https://tailwindcss.com/docs/installation).
+The most simple way, is to follow the [installation page of tailwindcss](https://tailwindcss.com/docs/installation/).
 
-At the end, you should have tailwindcss installed, and I advise to use the following tailwind configuration:
+At the end, you should have tailwindcss installed, and I advise to use the following tailwind configuration (for tailwindcss v4):
 
 ```js
 # tailwind.config.js
 module.exports = {
   content: ["./templates/**/*.html", "./themes/**/*.html",  "./themes/**/*.html"],
-  theme: {},
-  variants: {},
-  plugins: [
-      require('@tailwindcss/typography'),
-  ],
 };
 ```
 
@@ -52,6 +47,12 @@ Create a file `styles/styles.css`, and use the following command to generate the
 
 ```
 npx tailwindcss -i styles/styles.css -o static/styles/styles.css
+```
+
+or, starting with tailwindcss v4.0, the separate CLI command
+
+```
+npx @tailwindcss/cli -i styles/styles.css -o static/styles/styles.css
 ```
 
 The resulting file `static/styles/styles.css` is loaded in the html.

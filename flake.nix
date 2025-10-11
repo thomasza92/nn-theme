@@ -1,30 +1,19 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     oxalica.url = "github:oxalica/rust-overlay";
     oxalica.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, oxalica }:
+  outputs = { nixpkgs, oxalica, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
-        system = "x86_64-linux";
+        inherit system;
         overlay.default = [ oxalica.overlay ];
         config.allowUnfree = true;
       };
 
-      # To update the tailwind packages use node2nix
-      # node2nix -c tailwindcss.nix -16
-      nodeDependencies = (pkgs.callPackage ({ pkgs, system }:
-        let nodePackages = import ./tailwindcss.nix { inherit pkgs system; };
-        in nodePackages // {
-          shell = nodePackages.shell.override {
-            buildInputs = [
-              # pkgs.nodePackages.node-gyp-build
-            ];
-          };
-        }) { }).nodeDependencies;
     in {
 
       packages.x86_64-linux = {
@@ -51,8 +40,7 @@
           buildInputs = [
             pkgs.zola
             pkgs.nodePackages.npm
-            pkgs.tree
-            # nodeDependencies
+            pkgs.tailwindcss_4
           ];
 
           checkPhase = ''
@@ -60,10 +48,6 @@
           '';
 
           buildPhase = ''
-            # https://github.com/svanderburg/node2nix#using-the-nodejs-environment-in-other-nix-derivations
-            ln -s ${nodeDependencies}/lib/node_modules ./node_modules
-            export PATH="${nodeDependencies}/bin:$PATH"
-
             tailwindcss -i styles/styles.css -o static/styles/style.css
           '';
 
@@ -77,14 +61,8 @@
       devShell.x86_64-linux = pkgs.mkShell {
         buildInputs = with pkgs; [
           zola
-          nodeDependencies
-          # nodePackages.npm
-          nodePackages.node2nix
+          pkgs.tailwindcss_4
         ];
-        # This tells npx where to find the node lib.
-        # The css generation can be done with:
-        # npx tailwindcss -i styles/styles.css -o static/styles/styles.css
-        # NODE_PATH="${nodeDependencies}/lib/node_modules";
       };
     };
 }

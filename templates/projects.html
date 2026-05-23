@@ -7,8 +7,16 @@
   <ul class="text-sm leading-snug text-gray-800" style="list-style-type: disc; list-style-position: outside; margin: 3rem auto 0 auto; padding-left: 1.25rem; max-width: 42rem;">
     {% for page in section.pages %}
     <li style="padding-left: 0.5rem; margin-bottom: 1.5rem;">
-      <div class="font-bold text-gray-900">
-        {{ page.title }}
+      <div class="project-heading font-bold text-gray-900">
+        <span>{{ page.title }}</span>
+        {% if page.extra.tags %}
+        <span class="project-tag-separator" aria-hidden="true">—</span>
+        <span class="project-tags" aria-label="Technologies used">
+          {% for tag in page.extra.tags %}
+          <span class="project-tag">{{ tag | lower }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
       </div>
       <div>
         {{ page.extra.description }}

@@ -1,6 +1,6 @@
 /* ./styles/styles.css */
 
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 #header {
@@ -9,9 +9,51 @@
 
 .zola-anchor {
   padding-left: 0.5rem;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .zola-anchor:hover {
   opacity: 1;
+}
+
+.project-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.project-tag-separator {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.project-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.project-tag {
+  border: 1px solid #bfdbfe;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+  color: #1d4ed8;
+  font-family: var(
+    --font-mono,
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace
+  );
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  padding: 0.16rem 0.38rem;
 }

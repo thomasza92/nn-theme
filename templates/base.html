@@ -21,7 +21,22 @@
   {% block user_head -%}
   {% endblock user_head -%}
 
-  <title>{% if section -%}{{ section.title }} | {% endif %} {{ config.title }}</title>
+  <title>{{ config.title }}</title>
+
+  <style>
+    .profile-social-icon svg,
+    .profile-social-icon svg path {
+      fill: #000000;
+      stroke: #000000;
+      transition: fill 150ms ease, stroke 150ms ease;
+    }
+
+    .profile-social-icon:hover svg,
+    .profile-social-icon:hover svg path {
+      fill: #6b7280;
+      stroke: #6b7280;
+    }
+  </style>
 
   {% block head -%}
     {% block css -%}
@@ -46,11 +61,6 @@
     <a href="#page-top">Back to top of page</a>
   </div> -->
   {% block footer -%}
-  <footer class="bg-white">
-    <div class="bg-white text-gray-400 container max-w-4xl mx-auto my-8 px-4">
-    © {{ config.title }}. Template <a class="underline" target="_blank" href="https://github.com/adfaure/kodama-theme">Kodama</a> made with <a class="underline" target="_blank" href="https://getzola.org">zola</a>, inspired by <a class="underline" target="_blank" href="https://wowchemy.com/"> wowchemy</a> academic theme.
-    </div>
-  </footer>
   {% endblock footer -%}
 </body>
 

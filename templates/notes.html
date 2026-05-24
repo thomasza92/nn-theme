@@ -8,7 +8,7 @@
     {% for page in section.pages %}
     <li style="padding-left: 0.5rem; margin-bottom: 1.5rem;">
       <div class="font-bold text-gray-900">
-        <a class="blog-list-title text-gray-900 underline decoration-gray-500 underline-offset-4 hover:text-gray-700 hover:decoration-gray-700" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        <a class="note-list-title text-gray-900 underline decoration-gray-500 underline-offset-4 hover:text-gray-700 hover:decoration-gray-700" href="{{ page.permalink | safe }}">{{ page.title }}</a>
         {% if page.date %}<span class="font-normal text-gray-800"> - {{ page.date | date(format="%B %d, %Y") }}</span>{% endif %}
       </div>
     </li>

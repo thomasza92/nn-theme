@@ -1,5 +1,5 @@
 {% import 'macros/contact.html' as macros_contact -%}
-{% import 'macros/blog.html' as macros_blog -%}
+{% import 'macros/note.html' as macros_note -%}
 
 {% macro dot_lang() -%}
   {% if lang == config.default_language -%}{{ "" }}{% else -%}{{ "." ~ lang }}{% endif -%}
@@ -59,7 +59,7 @@
       <ul>
         {% for page in section.pages | slice(end=show_element) -%}
           <li class="pb-3">
-              {{ blog::page_summary(page=page, show_wordcount=show_wordcount, show_description=show_description) }}
+              {{ note::page_summary(page=page, show_wordcount=show_wordcount, show_description=show_description) }}
           </li>
         {% endfor %}
         <li><a href="{{section.permalink | safe}}" class="text-blue-600 hover:text-blue-800">...</a></li>

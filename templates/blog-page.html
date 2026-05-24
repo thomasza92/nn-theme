@@ -1,21 +1,12 @@
 {% extends "base.html" %}
 
-{% block title -%}
-{% set section =  get_section(path=page.ancestors[1], metadata_only=true)  -%}
-<title>{% if section -%}{{ section.title }} | {% endif %} {{ config.title }}</title>
-{% endblock title -%}
-
 {% block content %}
-<div class="container max-w-3xl mx-auto px-4">
-  <div class="pt-8 flex">
-    <h1 class="grow font-bold font-sans break-normal text-gray-900 text-3xl">{{ page.title }}</h1>
-    {% if page.date %}<p class="text-sm md:text-base font-normal text-gray-600 py-2">{{trans(key="Published", lang=lang)}} {{ page.date }}</p>{% endif %}
-  </div>
-  <hr class="border-b border-gray-400 mb-8">
-  {% if page.extra.tldr -%}
-  <p class="pb-4 text-gray-600"> <span class="font-bold">TLDR.</span> {{ page.extra.tldr | safe }} </p>
-  {% endif -%}
-  <article class="prose prose-indigo max-w-3xl">
+<div class="container max-w-4xl mx-auto px-4 py-10">
+  <header class="mb-10 border-b border-gray-200 pb-6">
+    <h1 class="font-bold font-sans break-normal text-gray-900 text-3xl md:text-4xl leading-tight">{{ page.title }}</h1>
+  </header>
+
+  <article class="prose prose-indigo prose-lg max-w-none prose-headings:font-bold prose-h2:mt-12 prose-h3:mt-8 prose-pre:rounded-lg prose-pre:p-4 prose-code:text-sm prose-img:rounded-lg">
     {{ macros::toc() }}
     {{ page.content | safe }}
     {% if page.extra.external_link %}<p><a href="{{page.extra.external_link | safe}}" target="_blank">{{page.extra.external_link | safe}}</a></p>{% endif -%}

@@ -1,7 +1,4 @@
 {% macro page_summary(page, show_wordcount=false, show_description=true) %}
-{% if page.extra.type -%} {# is this publication? -#}
-{{ publication::summary(page=page, show_urls=false, show_frame=false, show_description=show_description) }}
-{% else -%}
 {% if page.extra.external_link -%}
 <a href="{{ page.extra.external_link | safe }}" target="_blank">
 {% else -%}
@@ -17,5 +14,4 @@
   {% endif -%}
   <p class="text-sm text-slate-400"> {{ page.date }} {% if show_wordcount == true -%} • wordcount: {{ page.word_count }} • {{ page.reading_time }} min read {% endif -%}</p>
 </a>
-{% endif -%}
 {% endmacros %}

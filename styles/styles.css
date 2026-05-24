@@ -51,9 +51,15 @@
     "Courier New",
     monospace
   );
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.025em;
   line-height: 1;
   padding: 0.16rem 0.38rem;
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
 }

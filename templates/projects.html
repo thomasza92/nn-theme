@@ -1,12 +1,23 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="container max-w-4xl mx-auto px-4 py-8">
-  <h1 class="font-bold font-sans break-normal text-center text-gray-900 text-3xl md:text-4xl">{{ section.title }}</h1>
+  <h1
+    class="font-bold font-sans break-normal text-center text-gray-900 text-3xl md:text-4xl"
+  >
+    {{ section.title }}
+  </h1>
 
-  <ul class="text-sm leading-snug text-gray-800" style="list-style-type: disc; list-style-position: outside; margin: 3rem auto 0 auto; padding-left: 1.25rem; max-width: 42rem;">
+  <ul
+    class="text-base leading-normal text-gray-800"
+    style="
+      list-style-type: disc;
+      list-style-position: outside;
+      margin: 3rem auto 0 auto;
+      padding-left: 1.25rem;
+      max-width: 48rem;
+    "
+  >
     {% for page in section.pages %}
-    <li style="padding-left: 0.5rem; margin-bottom: 1.5rem;">
+    <li style="padding-left: 0.5rem; margin-bottom: 1.5rem">
       <div class="project-heading font-bold text-gray-900">
         <span>{{ page.title }}</span>
         {% if page.extra.tags %}
@@ -19,9 +30,14 @@
         {% endif %}
       </div>
       <div>
-        {{ page.extra.description }}
-        {% if page.extra.code %}
-        <a class="text-blue-600 hover:text-blue-800" href="{{ page.extra.code }}" target="_blank" rel="noopener noreferrer">[code]</a>
+        {{ page.extra.description }} {% if page.extra.code %}
+        <a
+          class="text-blue-600 hover:text-blue-800"
+          href="{{ page.extra.code }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          >[code]</a
+        >
         {% endif %}
       </div>
     </li>
